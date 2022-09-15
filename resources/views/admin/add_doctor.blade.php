@@ -54,13 +54,11 @@
 
             <div class="content">
                 <!-- Elements -->
-                <div class="block block-rounded">
-                  
-                    
-                  
+                <div class="block block-rounded">                                
                   <div class="block-content">
                     <h1 class="m-4 " style="text-align: center">Add Doctors Information</h1>
-                        <form action="be_forms_elements.html" method="POST" enctype="multipart/form-data" onsubmit="return false;">
+                        <form action="{{url('upload_doctor')}}" method="POST" enctype="multipart/form-data">
+                          @csrf
                           <!-- Basic Elements -->                                               
                             <div class="">
                               <div class="mb-4">
@@ -73,11 +71,11 @@
                               </div> 
                               <div class="mb-4">
                                 <label class="form-label" for="example-email-input">Room Number</label>
-                                <input type="number" class="form-control" id="example-email-input" name="phone" placeholder="Room number"     value="1" min="1">
+                                <input type="number" class="form-control" id="example-email-input" name="room_number" placeholder="Room number"     value="1" min="1">
                               </div>
                               <div class="mb-4">
                                 <label class="form-label" for="example-select">Speciality</label>
-                                <select class="form-select" id="example-select" name="example-select">
+                                <select class="form-select" id="example-select" name="speciality">
                                   <option selected>Open this select menu</option>
                                   <option value="1">Option #1</option>
                                   <option value="2">Option #2</option>                              
