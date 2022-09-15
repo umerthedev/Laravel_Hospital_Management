@@ -48,49 +48,65 @@
       
 
       <!-- Main Container -->
-      <main id="main-container">        
+      
+      <main id="main-container">                
         <div class="content">
-          <div class="d-md-flex justify-content-md-between align-items-md-center py-3 pt-md-3 pb-md-0 text-center text-md-start">
-
+          <div class="d-md-flex justify-content-md-between align-items-md-center py-3 pt-md-3 pb-md-0 text-center text-md-start">          
             <div class="content">
                 <!-- Elements -->
                 <div class="block block-rounded">                                
                   <div class="block-content">
+                    @if(session()->has('message'))
+  
+                    <div class="alert alert-success alert-dismissible fade show">
+                      <button type="button" class="btn-close" aria-label="Close">X</button>
+                        {{session()->get('message')}}
+        
+                    </div>
+        
+        
+                    @endif
                     <h1 class="m-4 " style="text-align: center">Add Doctors Information</h1>
-                        <form action="{{url('upload_doctor')}}" method="POST" enctype="multipart/form-data">
+                        <form action="{{url('upload_doctor')}}" method="post" enctype="multipart/form-data">
                           @csrf
                           <!-- Basic Elements -->                                               
                             <div class="">
                               <div class="mb-4">
                                 <label class="form-label" for="example-text-input">Name</label>
-                                <input type="text" class="form-control" id="example-text-input" name="name" placeholder="Doctors name">
+                                <input type="text" class="form-control" id="example-text-input" name="name" placeholder="Doctors name" required>
                               </div>
                               <div class="mb-4">
                                 <label class="form-label" for="example-email-input">Phone</label>
-                                <input type="text" class="form-control" id="example-email-input" name="phone" placeholder="Phone number">
+                                <input type="text" class="form-control" id="example-email-input" name="phone" placeholder="Phone number" required>
                               </div> 
                               <div class="mb-4">
                                 <label class="form-label" for="example-email-input">Room Number</label>
-                                <input type="number" class="form-control" id="example-email-input" name="room_number" placeholder="Room number"     value="1" min="1">
+                                <input type="text" class="form-control" id="example-email-input" name="room_number" placeholder="Room number" required >
                               </div>
                               <div class="mb-4">
                                 <label class="form-label" for="example-select">Speciality</label>
-                                <select class="form-select" id="example-select" name="speciality">
+                                <select class="" id="example-select" name="speciality">
                                   <option selected>Open this select menu</option>
-                                  <option value="1">Option #1</option>
-                                  <option value="2">Option #2</option>                              
+                                  <option value="Allergists">Allergists</option>
+                                  <option value="Dermatologists">Dermatologists</option>                              
+                                  <option value="Endocrinologists">Endocrinologists</option>                              
+                                  <option value="Family Physicians">Family Physicians</option>                              
+                                  <option value="Gastroenterologists">Gastroenterologists</option>                              
+                                  <option value="Hematologists">Hematologists</option>                              
+                                  <option value="Internists">Internists</option>                              
+                                  <option value="Medical Geneticists">Medical Geneticists</option>                              
                                 </select>                                                              
                              </div>   
                              <div class="row push">
                                 <div class="col-lg-8 col-xl-5 overflow-hidden">
                                     <div class="mb-2">
                                       <label class="form-label" for="example-file-input">File Input</label>
-                                      <input class="form-control" type="file" id="example-file-input">
+                                      <input class="form-control" type="file" name="file" required>
                                     </div>                      
                                 </div>                     
                              </div> 
                             
-                             <button type="button" class="btn btn-secondary bg-dark mb-4">Submit</button>
+                             <button type="submit" class="btn btn-secondary bg-dark mb-4">Submit</button>
                                                                           
                         </form>
                  </div>
