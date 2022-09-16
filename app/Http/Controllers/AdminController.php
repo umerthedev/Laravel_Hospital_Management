@@ -3,13 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\doctor;
+use App\Models\specialist;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
     public function add_doctor_view()
     {
-        return view('admin/add_doctor');
+        $sdata = specialist::all();
+        return view('admin/add_doctor', compact('sdata'));
     }
 
 
@@ -27,5 +29,36 @@ class AdminController extends Controller
         $doctor->speciality = $request->speciality;
         $doctor->save();
         return redirect()->back()->with('message', 'Doctor Added Successfully');
+    }
+
+    public function add_doctor_speciality()
+    {
+        $data = specialist::all();
+        return view('admin.add_speciality', compact('data'));
+    }
+
+
+
+    public function add_speciality(Request $request)
+    {
+        $specialist = new specialist;
+        $specialist->specialist_name = $request->specialist;
+        $specialist->save();
+        return redirect()->back()->with('message', 'Doctor Speciality Added Successfully');
+    }
+
+    public function edit_spe($id)
+    {
+        $cat = specialist::find($id);
+        return view('admin.edit_speciality', compact('cat'));
+    }
+
+
+    public function update_speciality(Request $request, $id)
+    {
+        $spe = specialist::find($id);
+        $spe->specialist_name = $request->specialist;
+        $spe->save();
+        return redirect()->back()->with('message', 'Doctor Speciality Update Successfully');
     }
 }

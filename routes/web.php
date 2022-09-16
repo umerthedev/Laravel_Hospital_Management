@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,6 +30,13 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
-
+// Add Doctor route
 Route::get('/add_doctor_view', [AdminController::class, 'add_doctor_view']);
 Route::post('/upload_doctor', [AdminController::class, 'upload']);
+Route::get('/add_doctor_speciality', [AdminController::class, 'add_doctor_speciality']);
+
+// speciality route
+Route::get('/view_speciality', [AdminController::class, 'view_speciality']);
+Route::post('/add_speciality', [AdminController::class, 'add_speciality']);
+Route::get('/edit_speciality/{id}', [AdminController::class, 'edit_spe']);
+Route::post('/update_speciality/{id}', [AdminController::class, 'update_speciality']);

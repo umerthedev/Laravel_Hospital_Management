@@ -55,12 +55,40 @@
             </a>
           </li>
           <li class="nav-main-item">
-            <a class="nav-main-link" href="{{url('add_doctor_view')}}">
+            <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
               <i class="nav-main-link-icon fa fa-flask"></i>
-              <span class="nav-main-link-name">Add Doctors</span>
-              {{-- <span class="nav-main-link-badge badge rounded-pill bg-primary"></span> --}}
+              <span class="nav-main-link-name">Doctors</span>
             </a>
+            <ul class="nav-main-submenu">
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="{{url('add_doctor_speciality')}}">
+                  <span class="nav-main-link-name">Add Speciality</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="{{url('add_doctor_view')}}">                  
+                  <span class="nav-main-link-name">Add Doctors</span>
+                  {{-- <span class="nav-main-link-badge badge rounded-pill bg-primary"></span> --}}
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="be_blocks_forms.html">
+                  <span class="nav-main-link-name">Forms</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="be_blocks_themed.html">
+                  <span class="nav-main-link-name">Themed</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="be_blocks_api.html">
+                  <span class="nav-main-link-name">API</span>
+                </a>
+              </li>
+            </ul>
           </li>
+          
           
           <li class="nav-main-heading">Base</li>
           <li class="nav-main-item">

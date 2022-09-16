@@ -71,30 +71,24 @@
                           @csrf
                           <!-- Basic Elements -->                                               
                             <div class="">
-                              <div class="mb-4">
+                              <div class="mb-2">
                                 <label class="form-label" for="example-text-input">Name</label>
                                 <input type="text" class="form-control" id="example-text-input" name="name" placeholder="Doctors name" required>
                               </div>
-                              <div class="mb-4">
+                              <div class="mb-2">
                                 <label class="form-label" for="example-email-input">Phone</label>
                                 <input type="text" class="form-control" id="example-email-input" name="phone" placeholder="Phone number" required>
                               </div> 
-                              <div class="mb-4">
+                              <div class="mb-2">
                                 <label class="form-label" for="example-email-input">Room Number</label>
                                 <input type="text" class="form-control" id="example-email-input" name="room_number" placeholder="Room number" required >
                               </div>
-                              <div class="mb-4">
-                                <label class="form-label" for="example-select">Speciality</label>
+                              <div class="mb-2 mt-2">
                                 <select class="" id="example-select" name="speciality">
-                                  <option selected>Open this select menu</option>
-                                  <option value="Allergists">Allergists</option>
-                                  <option value="Dermatologists">Dermatologists</option>                              
-                                  <option value="Endocrinologists">Endocrinologists</option>                              
-                                  <option value="Family Physicians">Family Physicians</option>                              
-                                  <option value="Gastroenterologists">Gastroenterologists</option>                              
-                                  <option value="Hematologists">Hematologists</option>                              
-                                  <option value="Internists">Internists</option>                              
-                                  <option value="Medical Geneticists">Medical Geneticists</option>                              
+                                  <option selected>select specialist doctor</option>
+                                  @foreach ($sdata as $sd2)
+                                  <option value="{{$sd2->specialist_name}}">{{$sd2->specialist_name}}</option>
+                                  @endforeach                                                           
                                 </select>                                                              
                              </div>   
                              <div class="row push">

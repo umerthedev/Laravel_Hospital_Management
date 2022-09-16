@@ -48,13 +48,41 @@
       
 
       <!-- Main Container -->
-      <main id="main-container">        
+      <main id="main-container">                
         <div class="content">
-          <div class="d-md-flex justify-content-md-between align-items-md-center py-3 pt-md-3 pb-md-0 text-center text-md-start">
-            @include('admin.content')
+           <div class="d-md-flex justify-content-md-between align-items-md-center py-3 pt-md-3 pb-md-0    text-center text-md-start">          
+              <div class="content">
+                <!-- Elements -->
+                <div class="block block-rounded">                                
+                  <div class="block-content">
+                    @if(session()->has('message'))
+  
+                    <div class="alert alert-success alert-dismissible fade show">
+                      <button type="button" class="btn-close" aria-label="Close">X</button>
+                        {{session()->get('message')}}
+        
+                    </div>
+        
+        
+                    @endif
+                  <h1 class="m-4 " style="text-align: center">Doctor Speciality list</h1>
+
+                    <form action="{{url('/update_speciality',$cat->id)}}" method="POST">
+                        @csrf
+                        <div >
+                            <input type="text" id="inputcat" class="form-control"  placeholder="Add Specialist Doctor" name="specialist" value="{{$cat->specialist_name}}" > 
+                        </div>
+                        <div >
+                            <button type="submit"  class="btn btn-secondary bg-dark mt-2 mb-2">Update</button>
+                        </div>    
+                    </form>             
+                     
+                <div>
+            </div>
+       </div>
             
-          </div>
-        </div>        
+          
+                
       </main>
       <!-- END Main Container -->
 
