@@ -73,3 +73,13 @@
       </div> <!-- .navbar-collapse -->
     </div> <!-- .container -->
   </nav>
+  @if(session()->has('message'))
+  
+      <div class="alert alert-success alert-dismissible fade show">
+        <button type="button" class="btn-close" aria-label="Close">X</button>
+          {{session()->get('message')}}
+
+      </div>
+
+
+      @endif

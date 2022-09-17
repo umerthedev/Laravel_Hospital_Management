@@ -40,3 +40,6 @@ Route::get('/view_speciality', [AdminController::class, 'view_speciality']);
 Route::post('/add_speciality', [AdminController::class, 'add_speciality']);
 Route::get('/edit_speciality/{id}', [AdminController::class, 'edit_spe']);
 Route::post('/update_speciality/{id}', [AdminController::class, 'update_speciality']);
+
+
+Route::post('/appointment', [HomeController::class, 'appointment']);
