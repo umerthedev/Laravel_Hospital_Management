@@ -43,3 +43,5 @@ Route::post('/update_speciality/{id}', [AdminController::class, 'update_speciali
 
 
 Route::post('/appointment', [HomeController::class, 'appointment']);
+Route::get('/myappointment', [HomeController::class, 'myappointment']);
+Route::get('/delete_app/{id}', [HomeController::class, 'delete_app']);

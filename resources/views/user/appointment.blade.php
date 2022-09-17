@@ -1,4 +1,4 @@
-<div class="page-section">
+<div class="page-section" id="apps">
     <div class="container">
       
       <h1 class="text-center wow fadeInUp">Make an Appointment</h1>
@@ -19,7 +19,7 @@
             <select name="doctor" id="departement" class="custom-select">
               <option >Select Doctor</option>
               @foreach ($doctor as $do)                 
-              <option value="{{$do->speciality}}">{{$do->name}}--Expert--{{$do->speciality}}</option>
+              <option value="{{$do->name}}">{{$do->name}}--Expert--{{$do->speciality}}</option>
               @endforeach
             </select>
           </div>

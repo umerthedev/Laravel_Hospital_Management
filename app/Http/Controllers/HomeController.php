@@ -39,14 +39,28 @@ class HomeController extends Controller
         $data->phone = $request->phone;
         $data->message = $request->message;
         $data->status = 'In Progress';
-        if(Auth::id())
-        {
-            $data->user_id =Auth::user()->id;
+        if (Auth::id()) {
+            $data->user_id = Auth::user()->id;
         }
-        
+
         $data->save();
         return redirect()->back()->with('message', 'Appointment Submit Successfully, We Will Contact with You Soon!!!!!!!');
+    }
+    public function myappointment()
+    {
+        if (Auth::id()) {
+            $userid = Auth::user()->id;
+            $appoint = appointment::where('user_id', $userid)->get();
+            return view('user.my_appointment', compact('appoint'));
+        } else {
+            return redirect()->back();
+        }
+    }
 
-
+    public function delete_app($id)
+    {
+        $delapp = appointment::find($id);
+        $delapp->delete();
+        return redirect()->back()->with('message', 'Appointment Cancel Successfully');
     }
 }
