@@ -48,6 +48,13 @@ class AdminController extends Controller
         return redirect()->back()->with('message', 'Doctor Speciality Added Successfully');
     }
 
+    public function delete_speciality($id)
+    {
+        $del = specialist::find($id);
+        $del->delete();
+        return redirect()->back()->with('message', 'Doctor Speciality Delete Successfully');
+    }
+
     public function edit_spe($id)
     {
         $cat = specialist::find($id);
@@ -66,7 +73,7 @@ class AdminController extends Controller
     public function show_appointment()
     {
         $apps = appointment::all();
-        return view ('admin.show_appointment', compact('apps'));
+        return view('admin.show_appointment', compact('apps'));
     }
 
     public function approved_appoint($id)
@@ -83,5 +90,10 @@ class AdminController extends Controller
         $app_cancel->save();
         return redirect()->back()->with('message', 'Appointment Cancel Successfully');
     }
-    
+
+    public function show_doctors()
+    {
+        $docs = doctor::all();
+        return view('admin.show_doctors', compact('docs'));
+    }
 }

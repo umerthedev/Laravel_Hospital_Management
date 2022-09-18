@@ -74,8 +74,8 @@
                 </a>
               </li>
               <li class="nav-main-item">
-                <a class="nav-main-link" href="be_blocks_forms.html">
-                  <span class="nav-main-link-name">Forms</span>
+                <a class="nav-main-link" href="{{url('show_doctors')}}">
+                  <span class="nav-main-link-name">All Doctors</span>
                 </a>
               </li>
               <li class="nav-main-item">

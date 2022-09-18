@@ -40,9 +40,14 @@ Route::get('/show_appointment', [AdminController::class, 'show_appointment']);
 Route::get('/approved_appoint/{id}', [AdminController::class, 'approved_appoint']);
 Route::get('/cancel_appoint/{id}', [AdminController::class, 'cancel_appoint']);
 
+
+
+Route::get('/show_doctors', [AdminController::class, 'show_doctors']);
+
 // speciality route
 Route::get('/view_speciality', [AdminController::class, 'view_speciality']);
 Route::post('/add_speciality', [AdminController::class, 'add_speciality']);
+Route::get('/delete_speciality/{id}', [AdminController::class, 'delete_speciality']);
 Route::get('/edit_speciality/{id}', [AdminController::class, 'edit_spe']);
 Route::post('/update_speciality/{id}', [AdminController::class, 'update_speciality']);
 
@@ -50,7 +55,3 @@ Route::post('/update_speciality/{id}', [AdminController::class, 'update_speciali
 Route::post('/appointment', [HomeController::class, 'appointment']);
 Route::get('/myappointment', [HomeController::class, 'myappointment']);
 Route::get('/delete_app/{id}', [HomeController::class, 'delete_app']);
-
-
-
-

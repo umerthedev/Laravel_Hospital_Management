@@ -50,17 +50,18 @@
       <!-- Main Container -->
       <main id="main-container">                
         <div class="content">
-           <div class="d-md-flex justify-content-md-between align-items-md-center py-3 pt-md-3 pb-md-0    text-center text-md-start">         
+           <div class="d-md-flex justify-content-md-between align-items-md-center py-3 pt-md-3 pb-md-0 text-center text-md-start">         
                              <!-- Elements -->
                 <div class="block block-rounded">                                
                   <div class="block-content">
-                    @if(session()->has('message'))
-  
-                    <div class="alert alert-success alert-dismissible fade show">
-                      <button type="button" class="btn-close" aria-label="Close">X</button>
-                        {{session()->get('message')}}
-        
+                    @if(session()->has('message'))  
+                   
+                    <div class="alert alert-success alert-dismissible" role="alert">
+                      <p class="mb-0">{{session()->get('message')}}!!!</p>
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">X</button>
+                      
                     </div>
+        
                     @endif
                   <h1 class="m-4 " style="text-align: center">Doctor Speciality list</h1>
                           <div>             
