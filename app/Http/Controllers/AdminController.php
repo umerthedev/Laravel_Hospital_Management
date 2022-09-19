@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\doctor;
+use App\Models\Appointment;
 use App\Models\specialist;
 use Illuminate\Http\Request;
 
@@ -61,4 +62,19 @@ class AdminController extends Controller
         $spe->save();
         return redirect()->back()->with('message', 'Doctor Speciality Update Successfully');
     }
+
+    public function show_appointment()
+    {
+        $apps = appointment::all();
+        return view ('admin.show_appointment', compact('apps'));
+    }
+
+    // public function appoint_approved($id)
+    // {
+    //     $apps = appointment::find($id);
+    //     $apps->status = 'Approved';
+    //     $apps->save();
+    //     return redirect()->back()->with('message', 'Appointment Approved Successfully');
+    // }
+    
 }

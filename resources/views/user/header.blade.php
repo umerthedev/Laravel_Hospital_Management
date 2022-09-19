@@ -45,11 +45,11 @@
           <li class="nav-item">
             <a class="nav-link" href="#doctors">Doctors</a>
           </li>          
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a class="nav-link" href="#apps">Contact</a>
-          </li>
+          </li> --}}
           <li class="nav-item">
-            <a class="nav-link" href="#Health">About Us</a>
+            <a class="nav-link" href="#apps">Book Appointment</a>
           </li>
           @if(Route::has('login'))
           @auth

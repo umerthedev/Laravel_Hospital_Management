@@ -35,6 +35,9 @@ Route::get('/add_doctor_view', [AdminController::class, 'add_doctor_view']);
 Route::post('/upload_doctor', [AdminController::class, 'upload']);
 Route::get('/add_doctor_speciality', [AdminController::class, 'add_doctor_speciality']);
 
+Route::get('/show_appointment', [AdminController::class, 'show_appointment']);
+Route::get('/appointment_approved/{id}', [AdminController::class, 'appoint_approved']);
+
 // speciality route
 Route::get('/view_speciality', [AdminController::class, 'view_speciality']);
 Route::post('/add_speciality', [AdminController::class, 'add_speciality']);
@@ -45,3 +48,7 @@ Route::post('/update_speciality/{id}', [AdminController::class, 'update_speciali
 Route::post('/appointment', [HomeController::class, 'appointment']);
 Route::get('/myappointment', [HomeController::class, 'myappointment']);
 Route::get('/delete_app/{id}', [HomeController::class, 'delete_app']);
+
+
+
+
