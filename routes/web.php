@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Models\Appointment;
 
 
 /*
@@ -36,7 +37,8 @@ Route::post('/upload_doctor', [AdminController::class, 'upload']);
 Route::get('/add_doctor_speciality', [AdminController::class, 'add_doctor_speciality']);
 
 Route::get('/show_appointment', [AdminController::class, 'show_appointment']);
-Route::get('/appointment_approved/{id}', [AdminController::class, 'appoint_approved']);
+Route::get('/approved_appoint/{id}', [AdminController::class, 'approved_appoint']);
+Route::get('/cancel_appoint/{id}', [AdminController::class, 'cancel_appoint']);
 
 // speciality route
 Route::get('/view_speciality', [AdminController::class, 'view_speciality']);

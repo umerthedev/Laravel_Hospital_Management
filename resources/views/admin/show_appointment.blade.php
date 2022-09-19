@@ -50,9 +50,8 @@
       <!-- Main Container -->
       <main id="main-container">                
         <div class="content">
-           <div class="d-md-flex justify-content-md-between align-items-md-center py-3 pt-md-3 pb-md-0    text-center text-md-start">          
-              <div class="content">
-                <!-- Elements -->
+           <div class="d-md-flex justify-content-md-between align-items-md-center py-3 pt-md-3 pb-md-0    text-center text-md-start">         
+                             <!-- Elements -->
                 <div class="block block-rounded">                                
                   <div class="block-content">
                     @if(session()->has('message'))
@@ -91,12 +90,12 @@
                                     
                                     <td class="text-center">
                                       <div class="btn-group">
-                                        <a href="{{url('appoint_approved',$appoint->id)}}">
-                                        <button type="submit" class="btn btn-sm btn-alt-secondary" data-bs-toggle="tooltip" title="Approved">
+                                        <a href="{{url('approved_appoint',$appoint->id)}}">
+                                        <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-toggle="tooltip" title="Approved">
                                           <i class="fa fa-check"></i>
                                         </button></a>
-                                        <a href="{{url('appoint_cancel',$appoint->id)}}">
-                                        <button type="submit" class="btn btn-sm btn-alt-secondary" data-bs-toggle="tooltip" title="Cancel">
+                                        <a href="{{url('cancel_appoint',$appoint->id)}}">
+                                        <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-toggle="tooltip" title="Cancel">
                                           <i class="fa fa-times"></i>
                                         </button></a>
                                       </div>
@@ -108,7 +107,7 @@
                            </div>  
                        </div>
                    </div>
-                </div>
+                
            </div>
         </div>
             

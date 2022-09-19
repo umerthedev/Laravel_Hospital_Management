@@ -69,12 +69,19 @@ class AdminController extends Controller
         return view ('admin.show_appointment', compact('apps'));
     }
 
-    // public function appoint_approved($id)
-    // {
-    //     $apps = appointment::find($id);
-    //     $apps->status = 'Approved';
-    //     $apps->save();
-    //     return redirect()->back()->with('message', 'Appointment Approved Successfully');
-    // }
+    public function approved_appoint($id)
+    {
+        $app_approved = appointment::find($id);
+        $app_approved->status = 'Approved';
+        $app_approved->save();
+        return redirect()->back()->with('message', 'Appointment Approved Successfully');
+    }
+    public function cancel_appoint($id)
+    {
+        $app_cancel = appointment::find($id);
+        $app_cancel->status = 'Canceled';
+        $app_cancel->save();
+        return redirect()->back()->with('message', 'Appointment Cancel Successfully');
+    }
     
 }
