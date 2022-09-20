@@ -61,7 +61,7 @@
               {{-- <i class="nav-main-link-icon fa fa-flask"></i> --}}
               <span class="nav-main-link-name">Doctors</span>
             </a>
-            <ul class="nav-main-submenu">
+            {{-- <ul class="nav-main-submenu"> --}}
               <li class="nav-main-item">
                 <a class="nav-main-link" href="{{url('add_doctor_speciality')}}">
                   <span class="nav-main-link-name">Add Speciality</span>
@@ -77,17 +77,7 @@
                 <a class="nav-main-link" href="{{url('show_doctors')}}">
                   <span class="nav-main-link-name">All Doctors</span>
                 </a>
-              </li>
-              <li class="nav-main-item">
-                <a class="nav-main-link" href="be_blocks_themed.html">
-                  <span class="nav-main-link-name">Themed</span>
-                </a>
-              </li>
-              <li class="nav-main-item">
-                <a class="nav-main-link" href="be_blocks_api.html">
-                  <span class="nav-main-link-name">API</span>
-                </a>
-              </li>
+              </li>             
             </ul>
           </li>         
           <li class="nav-main-heading">Appointments</li>

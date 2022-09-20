@@ -129,13 +129,7 @@
     </div>
     <!-- END Page Container -->
    
-    <script src="admin/assets/js/dashmix.app.min.js"></script>
-
-    <!-- Page JS Plugins -->
-    <script src="admin/assets/js/plugins/chart.js/chart.min.js"></script>
-
-    <!-- Page JS Code -->
-    <script src="admin/assets/js/pages/be_pages_dashboard.min.js"></script>
+    @include('admin/script')
   </body>
 </html>
 

@@ -9,7 +9,8 @@
                 <a href="#">Covid19</a>
               </div>
               <a href="blog-details.html" class="post-thumb">
-                <img src="assets/img/blog/blog_1.jpg" alt="">
+                {{-- <img src="assets/img/blog/blog_1.jpg" alt=""> --}}
+                <img src="{{ asset('assets/img/blog/blog_1.jpg'); }}" alt="">
               </a>
             </div>
             <div class="body">
@@ -17,7 +18,8 @@
               <div class="site-info">
                 <div class="avatar mr-2">
                   <div class="avatar-img">
-                    <img src="assets/img/person/person_1.jpg" alt="">
+                    {{-- <img src="assets/img/person/person_1.jpg" alt=""> --}}
+                    <img src="{{ asset('assets/img/person/person_1.jpg'); }}" alt="">
                   </div>
                   <span>Roger Adams</span>
                 </div>
@@ -33,7 +35,8 @@
                 <a href="#">Covid19</a>
               </div>
               <a href="blog-details.html" class="post-thumb">
-                <img src="assets/img/blog/blog_2.jpg" alt="">
+                {{-- <img src="assets/img/blog/blog_2.jpg" alt=""> --}}
+                <img src="{{ asset('assets/img/blog/blog_2.jpg'); }}" alt="">
               </a>
             </div>
             <div class="body">
@@ -41,7 +44,8 @@
               <div class="site-info">
                 <div class="avatar mr-2">
                   <div class="avatar-img">
-                    <img src="assets/img/person/person_1.jpg" alt="">
+                    <img src="{{ asset('assets/img/person/person_1.jpg'); }}" alt="">
+                    {{-- <img src="assets/img/person/person_1.jpg" alt=""> --}}
                   </div>
                   <span>Roger Adams</span>
                 </div>
@@ -57,7 +61,8 @@
                 <a href="#">Covid19</a>
               </div>
               <a href="blog-details.html" class="post-thumb">
-                <img src="assets/img/blog/blog_3.jpg" alt="">
+                {{-- <img src="assets/img/blog/blog_3.jpg" alt=""> --}}
+                <img src="{{ asset('assets/img/blog/blog_3.jpg'); }}" alt="">
               </a>
             </div>
             <div class="body">
@@ -65,7 +70,8 @@
               <div class="site-info">
                 <div class="avatar mr-2">
                   <div class="avatar-img">
-                    <img src="assets/img/person/person_2.jpg" alt="">
+                    <img src="{{ asset('assets/img/person/person_2.jpg'); }}" alt="">
+                    {{-- <img src="assets/img/person/person_2.jpg" alt=""> --}}
                   </div>
                   <span>Diego Simmons</span>
                 </div>
@@ -76,7 +82,7 @@
         </div>
 
         <div class="col-12 text-center mt-4 wow zoomIn">
-          <a href="blog.html" class="btn btn-primary">Read More</a>
+          <a href="#" class="btn btn-primary">Read More</a>
         </div>
 
       </div>

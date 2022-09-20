@@ -17,9 +17,9 @@
 
 <!-- Icons -->
 <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
-<link href="{{ URL::asset("admin/assets/media/favicons/favicon.png")}}">
-<link rel="icon" type="image/png" sizes="192x192" href="{{ URL::asset("admin/assets/media/favicons/favicon-192x192.png")}}" >
-<link rel="apple-touch-icon" sizes="180x180" href="{{ URL::asset("admin/assets/media/favicons/apple-touch-icon-180x180.png")}}">
+<link href="{{ URL::asset("admin_assets/assets/media/favicons/favicon.png")}}">
+<link rel="icon" type="image/png" sizes="192x192" href="{{ URL::asset("admin_assets/assets/media/favicons/favicon-192x192.png")}}" >
+<link rel="apple-touch-icon" sizes="180x180" href="{{ URL::asset("admin_assets/assets/media/favicons/apple-touch-icon-180x180.png")}}">
 
 {{-- <link rel="icon" type="image/png" sizes="192x192" href="admin/assets/media/favicons/favicon-192x192.png"> --}}
 {{-- <link rel="apple-touch-icon" sizes="180x180" href="admin/assets/media/favicons/apple-touch-icon-180x180.png"> --}}
@@ -27,7 +27,7 @@
 
 <!-- Stylesheets -->
 <!-- Dashmix framework -->
-<link rel="stylesheet" id="css-main" href="{{ URL::asset("admin/assets/css/dashmix.min.css")}}" >
+<link rel="stylesheet" id="css-main" href="{{ URL::asset("admin_assets/assets/css/dashmix.min.css")}}" >
 {{-- <link rel="stylesheet" id="css-main" href="admin/assets/css/dashmix.min.css"> --}}
 
 <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->

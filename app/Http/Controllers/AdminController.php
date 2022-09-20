@@ -96,4 +96,9 @@ class AdminController extends Controller
         $docs = doctor::all();
         return view('admin.show_doctors', compact('docs'));
     }
+    public function edit_docts($id)
+    {
+        $doc = doctor::find($id);
+        return view('admin.edit_doctors', compact('doc'));
+    }
 }
