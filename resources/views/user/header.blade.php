@@ -74,11 +74,21 @@
       </div> <!-- .navbar-collapse -->
     </div> <!-- .container -->
   </nav>
-  @if(session()->has('message'))  
+  {{-- @if(session()->has('message'))  
                    
     <div class="alert alert-success alert-dismissible" role="alert">
-      <p class="mb-0">{{session()->get('message')}}!!!</p>
+      <p>{{session()->get('message')}}!!!</p>
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">X</button>
       
     </div>
-    @endif
+    @endif --}}
+    @if (session()->has('message'))
+    <div class="alert alert-dismissable alert-success">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <strong>
+            {!! session()->get('message') !!}
+        </strong>
+    </div>
+@endif

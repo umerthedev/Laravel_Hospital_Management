@@ -20,7 +20,7 @@ use App\Models\Appointment;
 Route::get('/', [HomeController::class, 'index']);
 
 // Admin And User Login Route
-Route::get('/home', [HomeController::class, 'redirect']);
+Route::get('/home', [HomeController::class, 'redirect'])->middleware('auth', 'verified');
 
 Route::middleware([
     'auth:sanctum',
@@ -44,6 +44,7 @@ Route::get('/cancel_appoint/{id}', [AdminController::class, 'cancel_appoint']);
 
 Route::get('/show_doctors', [AdminController::class, 'show_doctors']);
 Route::get('/edit_docts/{id}', [AdminController::class, 'edit_docts']);
+Route::post('/update_doctor/{id}', [AdminController::class, 'up_doctor']);
 
 // speciality route
 Route::get('/view_speciality', [AdminController::class, 'view_speciality']);

@@ -65,42 +65,46 @@
                     </div>
         
                     @endif
-                    <div class="">
-                        <div class="mb-2">
-                          <label class="form-label" for="example-text-input">Name</label>
-                          <input type="text" class="form-control" id="example-text-input" name="name" value="{{$doc->name}}"required>
-                        </div>
-                        <div class="mb-2">
-                          <label class="form-label" for="example-email-input">Phone</label>
-                          <input type="text" class="form-control" value="{{$doc->phone}}" id="example-email-input" name="phone" placeholder="Phone number" required>
-                        </div> 
-                        <div class="mb-2">
-                          <label class="form-label" for="example-email-input">Room Number</label>
-                          <input type="text" class="form-control" value="{{$doc->room_number}}" id="example-email-input" name="room_number" placeholder="Room number" required >
-                        </div>
-                        <div class="mb-2">
-                          <label class="form-label" for="example-email-input">Old image</label>                         
-                          <img height="150px" width="150px"  src="{{url('doctorimage/'.$doc->image)}}" alt="">
-                        </div>
-                        {{-- <div class="mb-2 mt-2">
-                          <select class="" id="example-select" name="speciality">
-                            <option selected>select specialist doctor</option>
-                            @foreach ($doc as $sd2)
-                            <option value="{{$sd2->specialist_name}}">{{$sd2->specialist_name}}</option>
-                            @endforeach                                                           
-                          </select>                                                              
-                       </div>    --}}
-                       <br>
-                       <div class="row push">
-                          <div class="col-lg-8 col-xl-5 overflow-hidden">
-                              <div class="mb-2">
-                                <label class="form-label" for="example-file-input">New Image</label>
-                                <input class="form-control" type="file" name="file" required>
-                              </div>                      
-                          </div>                     
-                       </div> 
-                      
-                       <button type="submit" class="btn btn-secondary bg-dark mb-4">Submit</button>
+                    <h1 class="m-4 " style="text-align: center">Update Doctors Information</h1>
+                    <form action="{{url('update_doctor',$doc->id)}}" method="post" enctype="multipart/form-data">
+                          @csrf
+                           <div class="">
+                             <div class="mb-2">
+                               <label class="form-label" for="example-text-input">Name</label>
+                               <input type="text" class="form-control" id="example-text-input" name="name" value="{{$doc->name}}">
+                             </div>
+                             <div class="mb-2">
+                               <label class="form-label" for="example-email-input">Phone</label>
+                               <input type="text" class="form-control" value="{{$doc->phone}}" id="example-email-input" name="phone" placeholder="Phone number">
+                             </div> 
+                             <div class="mb-2">
+                               <label class="form-label" for="example-email-input">Room Number</label>
+                               <input type="text" class="form-control" value="{{$doc->room_number}}" id="example-email-input" name="room_number" placeholder="Room number" >
+                             </div>
+                             <div class="mb-2">
+                               <label class="form-label" for="example-email-input">Old image</label>                         
+                               <img height="150px" width="150px"  src="{{url('doctorimage/'.$doc->image)}}" alt="">
+                             </div>
+                             <div class="mb-2 mt-2">
+                              <select class="" id="example-select" name="speciality">
+                                <option selected>select specialist doctor</option>
+                                <option value="{{$doc->speciality}}" selected>{{$doc->speciality}}</option>
+                                @foreach ($spe as $sd2)
+                                <option value="{{$sd2->specialist_name}}">{{$sd2->specialist_name}}</option>
+                                @endforeach                                                           
+                              </select>                                                               
+                            </div>   
+                            <br>
+                            <div class="row push">
+                               <div class="col-lg-8 col-xl-5 overflow-hidden">
+                                   <div class="mb-2">
+                                     <label class="form-label" for="example-file-input">New Image</label>
+                                     <input class="form-control" type="file" name="file" >
+                                   </div>                      
+                               </div>                     
+                            </div> 
+                           
+                            <button type="submit" class="btn btn-secondary bg-dark mb-4">Submit</button>
                                                                     
                   </form>
                  </div>
