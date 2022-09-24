@@ -56,11 +56,12 @@
           </li>
           <li class="nav-main-heading">Doctors Manu</li>
           <li class="nav-main-item">
-            <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+            {{-- <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
               <i class="nav-main-link-icon fa fa-user-md"></i>
-              {{-- <i class="nav-main-link-icon fa fa-flask"></i> --}}
+              <i class="nav-main-link-icon fa fa-flask"></i>
               <span class="nav-main-link-name">Doctors</span>
-            </a>
+              <span class="nav-main-link-name">Doctors</span>
+            </a> --}}
             {{-- <ul class="nav-main-submenu"> --}}
               <li class="nav-main-item">
                 <a class="nav-main-link" href="{{url('add_doctor_speciality')}}">

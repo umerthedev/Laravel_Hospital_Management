@@ -54,9 +54,17 @@
             
           <!-- Dynamic Table with Export Buttons -->
           <div class="block block-rounded">
+            {{-- message-container --}}
+                  @if(session()->has('message'))  
+                    <div class="alert alert-success alert-dismissible" role="alert">
+                      <p class="mb-0">{{session()->get('message')}}!!!</p>
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">X</button>
+                    </div>
+                  @endif
+                   {{--End message-container --}}
             <div class="block-header block-header-default">
-              <h3 class="block-title">
-                Dynamic Table <small>Export Buttons</small>
+              <h3 class="block-title" style="text-align: center">
+                Edit Doctor Table
               </h3>
             </div>
             <div class="block-content block-content-full">

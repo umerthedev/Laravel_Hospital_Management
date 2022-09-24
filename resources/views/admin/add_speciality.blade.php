@@ -69,7 +69,7 @@
                     <form action="{{url('/add_speciality')}}" method="POST">
                         @csrf
                         <div >
-                            <input type="text" id="inputcat" class="form-control"  placeholder="Add Specialist Doctor" name="specialist" > 
+                            <input type="text" id="inputcat" class="form-control"  placeholder="Add Specialist Doctor" name="specialist" required> 
                         </div>
                         <div >
                             <button type="submit"  class="btn btn-secondary bg-dark mt-2 mb-2">Add</button>

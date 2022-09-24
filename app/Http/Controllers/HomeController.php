@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\doctor;
-use App\Models\Appointment;
+use App\Models\specialist;
+use App\Models\appointment;
+
 
 class HomeController extends Controller
 {
@@ -17,7 +19,11 @@ class HomeController extends Controller
                 $doctor = doctor::all();
                 return view('user.home', compact('doctor'));
             } else {
-                return view('admin/home');
+                $user = user::all()->count();
+                $doctors = doctor::all()->count();
+                $specialist = specialist::all()->count();
+                $appoint = appointment::all()->count();
+                return view('admin/home', compact('user', 'doctors', 'specialist', 'appoint'));
             }
         } else {
             return redirect()->back();
@@ -44,13 +50,14 @@ class HomeController extends Controller
         }
 
         $data->save();
-        return redirect()->back()->with('message', 'Appointment Submit Successfully, We Will Contact with You Soon!!!!!!!');
+        return redirect()->back()->with('message', 'Appointment Submitted Successfully, We Will Contact with You Soon!!!!!!!');
     }
     public function myappointment()
     {
         if (Auth::id()) {
             $userid = Auth::user()->id;
             $appoint = appointment::where('user_id', $userid)->get();
+
             return view('user.my_appointment', compact('appoint'));
         } else {
             return redirect()->back();

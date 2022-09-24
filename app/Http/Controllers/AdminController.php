@@ -123,4 +123,10 @@ class AdminController extends Controller
         $docs->save();
         return redirect()->back()->with('message', 'Doctor info Changed Successfully');
     }
+    public function delete_docts($id)
+    {
+        $doctors = doctor::find($id);
+        $doctors->delete();
+        return redirect()->back()->with('message', 'Doctor Deleted from list Successfully');
+    }
 }
